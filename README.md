@@ -48,8 +48,6 @@ This phase involves utilizing the gained access to further exploit the environme
 2. **Utilizing Mythic:** Deploy the Mythic framework to create payloads and maintain access through a stable connection.
 3. **Analyzing Active Directory with BloodHound:** Employ BloodHound and SharpHound tools to extract and analyze comprehensive information, uncovering intricate details about the Active Directory environment.
 
-# BloodHound Analysis:
-
 BloodHound is a valuable tool for comprehending Active Directory relationships and potential vulnerabilities:
 
 - **Using BloodHound:** Start a Neo4j server, login, and upload information gathered by SharpHound. Analyze the relationships using BloodHound.
