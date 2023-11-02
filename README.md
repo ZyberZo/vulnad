@@ -15,24 +15,30 @@ Incorporating Mythic as a command-and-control framework(C2), tools like BloodHou
 1. **Choice of Virtualization Platform:** You can establish the Active Directory environment using various platforms like VirtualBox, VMware, or, in this case, Proxmox. I used a Proxmox server for the setup.
 2. **Components:** Deploy a Windows 2022 Domain Controller and a Windows 10 workstation.
 
+   PICTURE 1
+
 # Configuring Active Directory:
 
 1. **Domain Controller Configuration:** Start by installing Active Directory Domain Services on the Windows Server through Server Manager. Set up a new forest and define a root domain name.
 2. **Workstation Connection:** Configure the Windows 10 workstation to connect to the Active Directory environment.
 
+   Picture 2
+
 # Intentionally Making the Domain Controller Vulnerable:
 
 The setup involves implementing controlled vulnerabilities within the Domain Controller to examine its susceptibility to various attacks and security breaches.
 
-1. **Vulnerability Script:** A script from a specified GitHub repository (link provided below) is used to increase the vulnerabilities within the Domain Controller environment.
-2. **Testing for Weaknesses:** Employ tools to discover and exploit potential security gaps, focusing on retrieving user credentials from the Domain Controller.
+ 1. **Vulnerability Script:** A script from a specified GitHub repository (link: https://github.com/safebuffer/vulnerable-AD) is used to increase the vulnerabilities within the Domain Controller environment.
+ Picture 3:
+Once the Domain Controller environment is made vulnerable, the following steps involve exploitation and security testing:
 
-# Exploiting Vulnerabilities:
+1. **User Enumeration:** Utilize 'Kerbrute' to enumerate users, requiring a user list available from [kerberos_enum_userlists](https://github.com/attackdebris/kerberos_enum_userlists).
+2. **Password Discovery:** Using 'Kerbrute,' attempt to discover passwords for identified users.
+3. **Testing Compromised Credentials:** Use discovered credentials to authenticate services, like using 'crackmapexec' for SMB access.
 
-Exploration of vulnerabilities is critical to understand how security breaches might occur within an Active Directory environment.
+   Bilde 4-5-6
 
-1. **Kerbrute Enumeration:** Utilize Kerbrute to perform user enumeration and attempt to identify passwords associated with user accounts.
-2. **Password Testing:** Use the discovered credentials to authenticate services and access user accounts.
+   
 
 # Post-Exploitation Activities:
 
@@ -41,5 +47,14 @@ This phase involves utilizing the gained access to further exploit the environme
 1. **Tools for Control:** Employ specific tools like 'evil-winrm' to establish connections and control the compromised accounts.
 2. **Utilizing Mythic:** Deploy the Mythic framework to create payloads and maintain access through a stable connection.
 3. **Analyzing Active Directory with BloodHound:** Employ BloodHound and SharpHound tools to extract and analyze comprehensive information, uncovering intricate details about the Active Directory environment.
+
+# BloodHound Analysis:
+
+BloodHound is a valuable tool for comprehending Active Directory relationships and potential vulnerabilities:
+
+- **Using BloodHound:** Start a Neo4j server, login, and upload information gathered by SharpHound. Analyze the relationships using BloodHound.
+
+BloodHound aids in visualizing intricate relationships within the Active Directory environment, benefiting both attackers and defenders in identifying and managing complex attack paths and privilege relationships.
+
 
 
