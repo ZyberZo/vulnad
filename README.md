@@ -1,4 +1,4 @@
-# Active Directory Enviroment attack
+# Setting up and attacking Active Directory 
 
 
 This project involved setting up an Active Directory environment on a Proxmox server with a Windows 2022 Domain Controller and a Windows 10 workstation. The objective was to deliberately test and identify vulnerabilities within the Active Directory infrastructure.
