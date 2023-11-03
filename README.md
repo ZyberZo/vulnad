@@ -29,7 +29,7 @@ Incorporating Mythic as a command-and-control framework(C2), tools like BloodHou
 The setup involves implementing controlled vulnerabilities within the Domain Controller to examine its susceptibility to various attacks and security breaches.
 
  1. **Vulnerability Script:** A script from a specified GitHub repository (link: https://github.com/safebuffer/vulnerable-AD) is used to increase the vulnerabilities within the Domain Controller environment and setup the enviroment with random users.
-<img src="pictures/P3.png" alt="P1" width="800" style="display:inline-block; margin-right: 100px;">
+   <img src="pictures/P3.png" alt="P1" width="800" style="display:inline-block; margin-right: 100px;">
 
 Once the Domain Controller environment is made vulnerable, the following steps involve exploitation and security testing:
 
@@ -48,7 +48,7 @@ This phase involves utilizing the gained access to further exploit the environme
 
 1. **Tools for Control:** Employ specific tools like 'evil-winrm' to establish connections and control the compromised accounts.
 
-<img src="pictures/P7.png" alt="P1" width="1000" style="display:inline-block; margin-right: 100px;">
+   <img src="pictures/P7.png" alt="P1" width="1000" style="display:inline-block; margin-right: 100px;">
 
 3. **Utilizing Mythic:** Deploy the Mythic framework to create payloads and maintain access through a stable connection.
 
