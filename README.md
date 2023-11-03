@@ -28,8 +28,9 @@ Incorporating Mythic as a command-and-control framework(C2), tools like BloodHou
 
 The setup involves implementing controlled vulnerabilities within the Domain Controller to examine its susceptibility to various attacks and security breaches.
 
- 1. **Vulnerability Script:** A script from a specified GitHub repository (link: https://github.com/safebuffer/vulnerable-AD) is used to increase the vulnerabilities within the Domain Controller environment.
+ 1. **Vulnerability Script:** A script from a specified GitHub repository (link: https://github.com/safebuffer/vulnerable-AD) is used to increase the vulnerabilities within the Domain Controller environment and setup the enviroment with random users.
  Picture 3:
+
 Once the Domain Controller environment is made vulnerable, the following steps involve exploitation and security testing:
 
 1. **User Enumeration:** Utilize 'Kerbrute' to enumerate users, requiring a user list available from [kerberos_enum_userlists](https://github.com/attackdebris/kerberos_enum_userlists).
@@ -45,14 +46,24 @@ Once the Domain Controller environment is made vulnerable, the following steps i
 This phase involves utilizing the gained access to further exploit the environment and maintain control:
 
 1. **Tools for Control:** Employ specific tools like 'evil-winrm' to establish connections and control the compromised accounts.
-2. **Utilizing Mythic:** Deploy the Mythic framework to create payloads and maintain access through a stable connection.
-3. **Analyzing Active Directory with BloodHound:** Employ BloodHound and SharpHound tools to extract and analyze comprehensive information, uncovering intricate details about the Active Directory environment.
+
+Bilde 7
+
+3. **Utilizing Mythic:** Deploy the Mythic framework to create payloads and maintain access through a stable connection.
+
+   Bilde 8-9
+5. **Analyzing Active Directory with BloodHound:** Employ BloodHound and SharpHound tools to extract and analyze comprehensive information, uncovering intricate details about the Active Directory environment.
+
 
 BloodHound is a valuable tool for comprehending Active Directory relationships and potential vulnerabilities:
 
 - **Using BloodHound:** Start a Neo4j server, login, and upload information gathered by SharpHound. Analyze the relationships using BloodHound.
 
 BloodHound aids in visualizing intricate relationships within the Active Directory environment, benefiting both attackers and defenders in identifying and managing complex attack paths and privilege relationships.
+
+
+10-11
+
 
 
 
