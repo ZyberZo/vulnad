@@ -15,21 +15,21 @@ Incorporating Mythic as a command-and-control framework(C2), tools like BloodHou
 1. **Choice of Virtualization Platform:** You can establish the Active Directory environment using various platforms like VirtualBox, VMware, or, in this case, Proxmox. I used a Proxmox server for the setup.
 2. **Components:** Deploy a Windows 2022 Domain Controller and a Windows 10 workstation.
 
-   PICTURE 1
+   <img src="picture/L1.png" alt="P1" width="600" style="display:inline-block; margin-right: 100px;">
 
 # Configuring Active Directory:
 
 1. **Domain Controller Configuration:** Start by installing Active Directory Domain Services on the Windows Server through Server Manager. Set up a new forest and define a root domain name.
 2. **Workstation Connection:** Configure the Windows 10 workstation to connect to the Active Directory environment.
 
-   Picture 2
+   <img src="pictures/L2.png" alt="P1" width="600" style="display:inline-block; margin-right: 100px;">
 
 # Intentionally Making the Domain Controller Vulnerable:
 
 The setup involves implementing controlled vulnerabilities within the Domain Controller to examine its susceptibility to various attacks and security breaches.
 
  1. **Vulnerability Script:** A script from a specified GitHub repository (link: https://github.com/safebuffer/vulnerable-AD) is used to increase the vulnerabilities within the Domain Controller environment and setup the enviroment with random users.
- Picture 3:
+<img src="pictures/L3.png" alt="P1" width="600" style="display:inline-block; margin-right: 100px;">
 
 Once the Domain Controller environment is made vulnerable, the following steps involve exploitation and security testing:
 
